@@ -1,3 +1,41 @@
 .section {
   text-align: center;
 }
+
+
+
+
+.logo {
+  width: 70px;
+  height: 58px;
+  margin: 33px 0 10px;
+  display: inline-block;
+}
+
+.logo span {
+  display: block;
+  margin: 0 auto 2px;
+  height: 13px;
+  border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  -webkit-border-radius: 2px 2px 2px 2px;
+}
+
+.logo .bl1 {
+  background: rgb(116, 201, 103);
+  width: 63px;
+}
+
+.logo .bl2 {
+  background: rgb(93, 194, 215);
+}
+
+.logo .bl3 {
+  background: #f782b9;
+  width: 62px;
+}
+
+.logo .bl4 {
+  background: rgb(233, 120, 119);
+  width: 48px;
+}
