@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet"
-          href="//fonts.googleapis.com/css?family=Raleway:400,300,600">
+          href="//fonts.googleapis.com/css?family=Roboto+Slab:100,400,700,300|
+              Roboto:100,200,300,400,500,700" >
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
@@ -19,34 +20,83 @@
   </head>
 
   <body>
-    <header class="section" role="banner">
-      <div class="container">
-        <div class="row">
 
-          <div class="two columns">
-            <i class="logo">
-              <span class="bl1 mantis"></span>
-              <span class="bl2 turquoise"></span>
-              <span class="bl3 pink"></span>
-              <span class="bl4 candyPink"></span>
-            </i>
-          </div>
+  <header class="container" role="banner">
+    <div class="offset-by-two two columns">
+      <ul class="head__logo">
+        <li class="head__block head__block--1 mantis"></li>
+        <li class="head__block head__block--2 turquoise"></li>
+        <li class="head__block head__block--3 pink"></li>
+        <li class="head__block head__block--4 candyPink"></li>
+      </ul>
+    </div>
+    <div class="eight columns">
+      <h2 class="logo__title">
+        <strong>Modern</strong> Developer
+      </h2>
+    </div>
+    <div class="twelve columns">
+      <p class="logo__motto">
+            Where Developers Become Exceptional and Relentless and Build
+            Extraordinary Products
+      </p>
+    </div>
+  </header>
 
-          <div class="ten columns">
-            <h2><strong>Modern</strong> Developer</h2>
-            <p>
-                Where Developers Become Exceptional and Relentless and Build
-                Extraordinary Products
-            </p>
-          </div>
-        </div>
-      </div>
-    </header>
+    <section class="container">
 
-    <main class="section" role="main">
-    </main>
+        <article class="span3 col platform platform--current pink">
+          <p class="platform__paragraph">
+            Elite programming academy for web programmers and cybersecurity
+            engineers.
+          </p>
+          <footer>
+            <span>Learn</span>
+          </footer>
+        </article>
+        <article class="span3 col platform platform--current amethyst">
+          <p class="platform__paragraph">
+            An encyclopedic resource so relevant and comprehensive as to
+            make programming knowledge clear and abundant.
+          </p>
+          <footer>
+            <span>Encyclopedia</span>
+          </footer>
+        </article>
+
+        <article class="span3 col platform platform--coming candyPink">
+          <p class="platform__paragraph">
+            The most sophisticated platform for web and mobile development.
+          </p>
+          <footer>
+            <span>QA</span>
+            <p>late 2017</p>
+          </footer>
+        </article>
+        <article class="span3 col platform platform--coming turquoise">
+          <p class="platform__paragraph">
+            Know what you must or risk becoming outmoded.
+          </p>
+          <footer>
+            <span>Know</span>
+            <p>late 2017</p>
+          </footer>
+        </article>
+        <article class="span6 col platform platform--coming uBlue">
+          <p class="platform__paragraph">
+            Our developer build products that use collective human intelligence
+            to overwhelm big problems in little time.
+          </p>
+          <footer>
+            <span>Labs</span>
+            <p>early 2017</p>
+          </footer>
+        </article>
+
+    </section>
 
     <footer class="section" role="contentinfo">
+
     </footer>
 
   </body>

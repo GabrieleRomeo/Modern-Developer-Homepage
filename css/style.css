@@ -1,20 +1,42 @@
-.section {
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  font-size: 100%;
+}
+
+body{
+  font-size: 100%;
+  color: #252e35;
+  font-family: "Roboto Slab", Roboto, "Helvetica Neue",
+                Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
+  background: #f6f6f6;
+}
+
+header {
   text-align: center;
+}
+
+.container {
+    max-width: 1280px;
 }
 
 .mantis { background-color: rgb(116, 201, 103); }
 .turquoise { background-color: rgb(93, 194, 215); }
 .pink { background-color: rgb(247, 130, 185); }
 .candyPink { background-color: rgb(233, 120, 119); }
+.amethyst { background-color: rgb(162, 105, 193); }
+.uBlue { background-color: rgb(106, 136, 221); }
 
-.logo {
+.head__logo {
   width: 70px;
   height: 58px;
-  margin: 33px 0 10px;
   display: inline-block;
+  padding-top: 20px;
 }
 
-.logo span {
+.head__block {
   display: block;
   margin: 0 auto 2px;
   height: 13px;
@@ -23,14 +45,126 @@
   -webkit-border-radius: 2px 2px 2px 2px;
 }
 
-.bl1 {
+.head__block--1 {
   width: 63px;
 }
 
-.bl3 {
+.head__block--3 {
   width: 62px;
 }
 
-.bl4 {
+.head__block--4 {
   width: 48px;
 }
+
+.platform {
+  font-weight: 100;
+  color: #fff;
+}
+
+.platform__paragraph {
+    padding: 20px;
+}
+
+/* Custom Breakpoints */
+
+/* Larger than tablet */
+@media screen and (min-width: 750px) {
+ /* Add your styles for devices with a maximum width of 750 */
+
+.heamd__logo { float: right; }
+.title {
+margin-top: 25px;
+text-align: left;
+}
+
+.platform--current {
+    height: 408px;
+}
+.platform--coming {
+    height: 197px;
+}
+
+.col:last-child {
+  margin-top: 1.5%;
+}
+
+.col{
+  float:left;
+  margin-left: 1.5%;
+}
+
+.col:first-child {
+  margin-left:0;
+}
+
+.span1{
+  width: 6.95833333333%;
+
+}
+.span2{
+  width: 15.4166666667%;
+
+}
+.span3{
+  width: 23.875%;
+
+}
+.span4{
+  width: 32.3333333333%;
+
+}
+.span5{
+  width: 40.7916666667%;
+
+}
+.span6{
+  width: 49.25%;
+
+}
+.span7{
+  width: 57.7083333333%;
+
+}
+.span8{
+  width: 66.1666666667%;
+
+}
+.span9{
+  width: 74.625%;
+
+}
+.span10{
+  width: 83.0833333333%;
+
+}
+.span11{
+  width: 91.5416666667%;
+
+}
+.span12{
+  width: 100%;
+  margin-left: 0;
+}
+
+}
+
+/* Larger than desktop */
+@media screen and (min-width: 1000px) {
+ /* Add your styles for devices with a maximum width of 1000 */
+}
+
+/* Larger than Desktop HD */
+@media screen and (min-width: 1200px) {
+ /* Add your styles for devices with a maximum width of 1200 */
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    *zoom:1;
+}
+
+
+
+
+
