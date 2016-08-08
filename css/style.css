@@ -10,6 +10,7 @@ body{
   color: #252e35;
   font-family: "Roboto Slab", Roboto, "Helvetica Neue",
                 Helvetica, Arial, sans-serif;
+  font-weight: 100;
   line-height: 1.5em;
   background: #f6f6f6;
 }
@@ -18,8 +19,28 @@ header {
   text-align: center;
 }
 
+p {
+  margin: 16px 0;
+}
+
+pre, blockquote, dl, figure, table, p, ul, ol, form {
+  margin-bottom: 0;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .container {
-    max-width: 1280px;
+  min-width: 320px;
+  max-width: 1280px;
 }
 
 .mantis { background-color: rgb(116, 201, 103); }
@@ -29,11 +50,15 @@ header {
 .amethyst { background-color: rgb(162, 105, 193); }
 .uBlue { background-color: rgb(106, 136, 221); }
 
+#topHeading {
+  margin-top: 25px;
+}
+
 .head__logo {
   width: 70px;
-  height: 58px;
+  height: 45px;
+  padding-bottom: 36px;
   display: inline-block;
-  padding-top: 20px;
 }
 
 .head__block {
@@ -57,33 +82,186 @@ header {
   width: 48px;
 }
 
+#logo__title {
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 0.8em;
+}
+
+#logo__title strong {
+  font-weight: 400;
+}
+
+#logo__motto {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 0.88em;
+}
+
 .platform {
-  font-weight: 100;
+  position: relative;
+  line-height: 1.3em;
   color: #fff;
+  border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  -webkit-border-radius: 2px 2px 2px 2px;
 }
 
 .platform__paragraph {
-    padding: 20px;
+  padding: 20px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.9);
+}
+
+.platform__name, .platform__date {
+  margin: 20px 0;
+}
+
+.platform__name {
+  font-size: 1.438em;
+  font-weight: 300;
+}
+
+.platform__date {
+  font-size: 0.938em;
+  color: rgba(255,255,255,0.5);
+}
+
+.platform__footer {
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.page__footer {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.label--email {
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: rgb(161, 97, 194);
+}
+
+input.form__input {
+  height: 46px;
+  border: 0;
+}
+
+input.form__input--email {
+  background-color: #f4f4f4;
+  border-radius: 2px 0px 0px 2px;
+  -moz-border-radius: 2px 0px 0px 2px;
+  -webkit-border-radius: 2px 0px 0px 2px;
+}
+
+input.form__input--button {
+  margin-left: -4px;
+  font-size: 0.98em;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  background-color: rgb(242, 128, 180);
+  border-radius: 0px 2px 2px 0px;
+  -moz-border-radius: 0px 2px 2px 0px;
+  -webkit-border-radius: 0px 2px 2px 0px;
+}
+
+.contact {
+  margin-top: 30px;
+}
+
+.contact__title {
+  font-size: 0.875em;
+  letter-spacing: 1px;
+  color: rgb(199, 199, 199);
+}
+
+.contact__email {
+  margin: 0;
+}
+
+.email__link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Custom Breakpoints */
+
+/* Larger than mobile */
+@media (min-width: 550px) {
+  .container {
+      width: 100%;
+  }
+}
+
+@media (min-width: 400px) {
+  .container {
+      width: 90%;
+  }
+}
 
 /* Larger than tablet */
 @media screen and (min-width: 750px) {
  /* Add your styles for devices with a maximum width of 750 */
 
-.heamd__logo { float: right; }
-.title {
-margin-top: 25px;
-text-align: left;
+#topHeading {
+  margin-top: 90px;
+}
+
+.head__logo {
+  margin-right: 23px;
+  padding-bottom: 0;
+}
+
+#logo__title {
+  display: inline-block;
+  margin-top: 25px;
+  text-align: left;
+  font-size: 3rem;
+}
+
+#logo__motto {
+  margin-top: 0;
+  margin-bottom: 90px;
 }
 
 .platform--current {
-    height: 408px;
+  height: 408px;
 }
 .platform--coming {
-    height: 197px;
+  height: 195px;
 }
+
+.platform__footer {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 40px);
+}
+
+.platform__name {
+  font-size: 1.250em;
+}
+
+.page__footer {
+  text-align: left;
+}
+
+.label--email {
+  padding-left: 20px;
+}
+
+input.form__input--email {
+  padding-left: 20px;
+  width: calc(100% - 86px);
+}
+
+.contact {
+  margin-top: 10px;
+  text-align: right;
+}
+
 
 .col:last-child {
   margin-top: 1.5%;
@@ -100,47 +278,36 @@ text-align: left;
 
 .span1{
   width: 6.95833333333%;
-
 }
 .span2{
   width: 15.4166666667%;
-
 }
 .span3{
   width: 23.875%;
-
 }
 .span4{
   width: 32.3333333333%;
-
 }
 .span5{
   width: 40.7916666667%;
-
 }
 .span6{
   width: 49.25%;
-
 }
 .span7{
   width: 57.7083333333%;
-
 }
 .span8{
   width: 66.1666666667%;
-
 }
 .span9{
   width: 74.625%;
-
 }
 .span10{
   width: 83.0833333333%;
-
 }
 .span11{
   width: 91.5416666667%;
-
 }
 .span12{
   width: 100%;
@@ -149,14 +316,15 @@ text-align: left;
 
 }
 
-/* Larger than desktop */
-@media screen and (min-width: 1000px) {
- /* Add your styles for devices with a maximum width of 1000 */
-}
 
 /* Larger than Desktop HD */
 @media screen and (min-width: 1200px) {
- /* Add your styles for devices with a maximum width of 1200 */
+  .platform__name {
+    font-size: 1.875em;
+  }
+  #logo__motto {
+    font-size: 0.94em;
+  }
 }
 
 /* For IE 6/7 (trigger hasLayout) */
