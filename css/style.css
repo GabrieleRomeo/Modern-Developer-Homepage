@@ -6,7 +6,7 @@ html {
 }
 
 body{
-  font-size: 100%;
+  font-size: 0.875em;
   color: #252e35;
   font-family: "Roboto Slab", Roboto, "Helvetica Neue",
                 Helvetica, Arial, sans-serif;
@@ -17,10 +17,6 @@ body{
 
 header {
   text-align: center;
-}
-
-p {
-  margin: 16px 0;
 }
 
 pre, blockquote, dl, figure, table, p, ul, ol, form {
@@ -102,6 +98,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   position: relative;
   line-height: 1.3em;
   color: #fff;
+  margin-bottom: 14px;
   border-radius: 2px 2px 2px 2px;
   -moz-border-radius: 2px 2px 2px 2px;
   -webkit-border-radius: 2px 2px 2px 2px;
@@ -109,7 +106,6 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 .platform__paragraph {
   padding: 20px;
-  font-size: 15px;
   color: rgba(255,255,255,0.9);
 }
 
@@ -145,7 +141,6 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 }
 
 input.form__input {
-  height: 46px;
   border: 0;
 }
 
@@ -157,6 +152,7 @@ input.form__input--email {
 }
 
 input.form__input--button {
+  width: 75px;
   margin-left: -4px;
   font-size: 0.98em;
   font-weight: 300;
@@ -204,130 +200,141 @@ input.form__input--button {
 
 /* Larger than tablet */
 @media screen and (min-width: 750px) {
- /* Add your styles for devices with a maximum width of 750 */
+  #topHeading {
+    margin-top: 90px;
+  }
 
-#topHeading {
-  margin-top: 90px;
-}
+  .head__logo {
+    margin-right: 23px;
+    padding-bottom: 0;
+  }
 
-.head__logo {
-  margin-right: 23px;
-  padding-bottom: 0;
-}
+  #logo__title {
+    display: inline-block;
+    margin-top: 25px;
+    text-align: left;
+    font-size: 2.4rem;
+  }
 
-#logo__title {
-  display: inline-block;
-  margin-top: 25px;
-  text-align: left;
-  font-size: 2.4rem;
-}
+  #logo__motto {
+    margin-top: 0;
+    margin-bottom: 70px;
+  }
 
-#logo__motto {
-  margin-top: 0;
-  margin-bottom: 90px;
-}
+  .platform {
+    width: calc(25% - 7.5px);
+    margin-bottom: 10px;
+  }
 
-.platform--current {
-  height: 408px;
-}
-.platform--coming {
-  height: 195px;
-}
+  .platform--current {
+    height: 330px;
+  }
+  .platform--coming {
+    min-height: calc((330px / 2) - 5px);
+  }
 
-.platform__footer {
-  position: absolute;
-  bottom: 0;
-  width: calc(100% - 40px);
-}
+  .platform--coming:last-child {
+    width: calc(50% - 5px);
+  }
 
-.platform__name {
-  font-size: 1.250em;
-}
+  .platform__footer {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 40px);
+  }
 
-.page__footer {
-  text-align: left;
-}
+  .platform__name {
+    font-size: 1.250em;
+  }
 
-.label--email {
-  padding-left: 20px;
-}
+  .page__footer {
+    text-align: left;
+    padding-top: 56px;
+  }
 
-input.form__input--email {
-  padding-left: 20px;
-  width: calc(100% - 86px);
-}
+  .label--email {
+    padding-left: 20px;
+  }
 
-.contact {
-  margin-top: 10px;
-  text-align: right;
-}
+  input.form__input--email {
+    padding-left: 20px;
+    width: calc(100% - 75px);
+  }
 
+  .contact {
+    margin-top: 10px;
+    text-align: right;
+  }
 
-.col:last-child {
-  margin-top: 1.5%;
-}
+  .col{
+    float:left;
+    margin-left: 10px;
+  }
 
-.col{
-  float:left;
-  margin-left: 1.5%;
-}
+  .col:first-child {
+    margin-left: 0;
+  }
 
-.col:first-child {
-  margin-left:0;
+  .span6{
+    width: 49.25%;
+  }
 }
-
-.span1{
-  width: 6.95833333333%;
-}
-.span2{
-  width: 15.4166666667%;
-}
-.span3{
-  width: 23.875%;
-}
-.span4{
-  width: 32.3333333333%;
-}
-.span5{
-  width: 40.7916666667%;
-}
-.span6{
-  width: 49.25%;
-}
-.span7{
-  width: 57.7083333333%;
-}
-.span8{
-  width: 66.1666666667%;
-}
-.span9{
-  width: 74.625%;
-}
-.span10{
-  width: 83.0833333333%;
-}
-.span11{
-  width: 91.5416666667%;
-}
-.span12{
-  width: 100%;
-  margin-left: 0;
-}
-
-}
-
 
 /* Larger than Desktop HD */
 @media screen and (min-width: 1200px) {
+  .col{
+    margin-left: 14px;
+  }
 
   #logo__title {
     font-size: 3rem;
   }
+
   .platform__name {
     font-size: 1.875em;
   }
+
   #logo__motto {
     font-size: 0.94em;
+    margin-bottom: 90px;
+  }
+
+  .platform {
+    width: calc(25% - 10.5px);
+    margin-bottom: 14px;
+    line-height: 1.6em;
+  }
+
+  .platform__paragraph {
+    font-size: 1.143em;
+  }
+
+  .platform--current {
+    height: 408px;
+  }
+
+  .platform--coming {
+    min-height: calc((408px / 2) - 7px);
+  }
+
+  .platform--coming:last-child {
+    width: calc(50% - 7px);
+  }
+
+  .page__footer {
+    padding-top: 76px;
+  }
+
+  input.form__input {
+    height: 52px;
+  }
+
+  input.form__input--button {
+    width: 98px;
+  }
+
+  input.form__input--email {
+    width: calc(100% - 98px);
   }
 }
 
