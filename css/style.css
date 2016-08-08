@@ -219,7 +219,7 @@ input.form__input--button {
   display: inline-block;
   margin-top: 25px;
   text-align: left;
-  font-size: 3rem;
+  font-size: 2.4rem;
 }
 
 #logo__motto {
@@ -319,6 +319,10 @@ input.form__input--email {
 
 /* Larger than Desktop HD */
 @media screen and (min-width: 1200px) {
+
+  #logo__title {
+    font-size: 3rem;
+  }
   .platform__name {
     font-size: 1.875em;
   }
