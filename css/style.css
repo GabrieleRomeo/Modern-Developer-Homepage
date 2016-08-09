@@ -258,6 +258,9 @@ input.form__input--button {
     margin-bottom: 0.8em;
     font-size: 1.250em;
   }
+  .platform__paragraph {
+    font-size: 0.750rem;
+  }
 
   .page__footer {
     text-align: left;
