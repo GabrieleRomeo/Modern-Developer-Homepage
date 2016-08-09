@@ -2,17 +2,13 @@ html {
   box-sizing: border-box;
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
-  font-size: 100%;
 }
 
 body{
-  font-size: 0.875em;
-  color: #252e35;
-  font-family: "Roboto Slab", Roboto, "Helvetica Neue",
-                Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
   line-height: 1.5em;
-  background: #f6f6f6;
 }
 
 header {
@@ -79,6 +75,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 }
 
 #logo__title {
+  font-family: 'Roboto Slab', serif;
   font-size: 2rem;
   font-weight: 200;
   line-height: 0.8em;
@@ -96,7 +93,6 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 .platform {
   position: relative;
-  line-height: 1.3em;
   color: #fff;
   margin-bottom: 14px;
   border-radius: 2px 2px 2px 2px;
@@ -114,6 +110,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 }
 
 .platform__name {
+  font-family: 'Roboto Slab', serif;
   font-size: 1.438em;
   font-weight: 300;
 }
