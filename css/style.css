@@ -144,6 +144,7 @@ input.form__input {
 input.form__input--email {
   width: calc(100% - 76px);
   background-color: #f4f4f4;
+  border: 1px solid transparent;
   border-radius: 2px 0px 0px 2px;
   -moz-border-radius: 2px 0px 0px 2px;
   -webkit-border-radius: 2px 0px 0px 2px;
@@ -319,6 +320,10 @@ input.form__input--button {
     margin-bottom: 4.36em;
   }
 
+  .container--platforms {
+    margin-bottom: 3.3em;
+  }
+
   .platform {
     width: calc(25% - 10.5px);
     margin-bottom: 14px;
@@ -338,10 +343,6 @@ input.form__input--button {
 
   .platform--coming:last-child {
     width: calc(50% - 7px);
-  }
-
-  .page__footer {
-    padding-top: 76px;
   }
 
   input.form__input {
