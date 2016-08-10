@@ -94,6 +94,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 #logo__motto {
   margin-top: 0;
   margin-bottom: 2.5em;
+  font-weight: 200;
+  color: rgb(158, 158, 158);
 }
 
 .platform {
