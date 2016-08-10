@@ -1,46 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Modern Developer</title>
+    <meta name="description" content="Modern Developer">
+    <meta name="author" content="">
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"
+          href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|
+                Roboto:100,200,300,400,500,700">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" href="icons/favicon.ico">
 
-</head>
-<body>
+  </head>
+  <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
+<!-- Page Header -->
+
+  <header class="container" id="topHeading" role="banner">
+    <div class="offset-by-two eight columns head__logo">
+      <ul class="logo">
+        <li class="logo__block logo__block--1 mantis"></li>
+        <li class="logo__block logo__block--2 turquoise"></li>
+        <li class="logo__block logo__block--3 pink"></li>
+        <li class="logo__block logo__block--4 candyPink"></li>
+      </ul>
+      <h2 id="logo__title">
+        <strong>Modern</strong> Developer
+      </h2>
+    </div>
+    <div class="twelve columns">
+      <p id="logo__motto">
+            Where Developers Become Exceptional and Relentless and Build
+            Extraordinary Products
+      </p>
+    </div>
+  </header>
+
+<!-- Platforms -->
+
+  <section class="container container--platforms">
+      <article class="span3 col platform platform--current pink">
+        <p class="platform__paragraph">
+          Elite programming academy for web programmers and cybersecurity
+          engineers.
+        </p>
+        <footer class="platform__footer">
+          <p class="platform__name">Learn</p>
+        </footer>
+      </article>
+      <article class="span3 col platform platform--current amethyst">
+        <p class="platform__paragraph">
+          An encyclopedic resource so relevant and comprehensive as to
+          make programming knowledge clear and abundant.
+        </p>
+        <footer class="platform__footer">
+          <p class="platform__name">Encyclopedia</p>
+        </footer>
+      </article>
+
+      <article class="span3 col platform platform--coming turquoise">
+        <p class="platform__paragraph">
+          Know what you must or risk becoming outmoded.
+        </p>
+        <footer class="platform__footer">
+          <p class="platform__name u-pull-left">Know</p>
+          <p class="platform__date u-pull-right">late 2017</p>
+        </footer>
+      </article>
+      <article class="span3 col platform platform--coming candyPink">
+        <p class="platform__paragraph">
+          The most sophisticated platform for web and mobile development.
+        </p>
+        <footer class="platform__footer">
+          <p class="platform__name u-pull-left">QA</p>
+          <p class="platform__date u-pull-right">late 2017</p>
+        </footer>
+      </article>
+      <article class="span6 col platform platform--coming uBlue">
+        <p class="platform__paragraph">
+          Our developers build products that use collective human intelligence
+          to overwhelm big problems in little time.
+        </p>
+        <footer class="platform__footer">
+          <p class="platform__name u-pull-left">Labs</p>
+          <p class="platform__date u-pull-right">early 2017</p>
+        </footer>
+      </article>
+  </section>
+
+<!-- Page Footer -->
+
+  <footer class="container page__footer" role="contentinfo">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+      <div class="span6 col">
+        <form id="getFirstAccess" method="" action="">
+          <label for="emailInput" class="label--email">
+            Get First Access
+          </label>
+          <input class="form__input form__input--email"
+                 id="emailInput"
+                 name="emailInput"
+                 value=""
+                 title="GetAccess"
+                 placeholder="Your Email Address"
+                 tabindex="1"
+                 type="text">
+          <input class="form__input form__input--button"
+                 id="submit"
+                 name="submit"
+                 value="go"
+                 tabindex="2"
+                 type="submit">
+        </form>
+      </div>
+      <div class="span6 col contact">
+        <dl>
+          <dt class="contact__title">&copy; 2016 Modern Developer Inc.</dt>
+          <dd class="contact__email">
+              <a class="email__link"
+                 href="mailto:whatsup%5Bat%5Dmoderndeveloper%5Bdot%5Dcom">
+                whatsup<span class="visuallyhidden">-SPAM-PROTECTION</span>@moderndeveloper.com
+              </a>
+          </dd>
+        </dl>
       </div>
     </div>
-  </div>
+  </footer>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+  </body>
 </html>
