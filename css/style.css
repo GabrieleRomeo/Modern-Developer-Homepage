@@ -145,7 +145,7 @@ input.form__input {
 input.form__input--email {
   width: calc(100% - 76px);
   background-color: #f4f4f4;
-  border: 1px solid transparent;
+  border: solid 1px #eae4e4;
   border-radius: 2px 0px 0px 2px;
   -moz-border-radius: 2px 0px 0px 2px;
   -webkit-border-radius: 2px 0px 0px 2px;
@@ -311,8 +311,8 @@ input.form__input--button {
   }
 
   .platform__name {
-    font-size: 1.7em;
-    margin-bottom: 1.2em;
+    margin-bottom: 1.3em;
+    font-size: 1.5em;
     font-weight: 400;
   }
 
