@@ -310,8 +310,9 @@ input.form__input--button {
   }
 
   .platform__name {
-    font-size: 1.875em;
+    font-size: 1.7em;
     margin-bottom: 1em;
+    font-weight: 400;
   }
 
   #logo__motto {
@@ -330,7 +331,7 @@ input.form__input--button {
   }
 
   .platform__paragraph {
-    font-size: 1.143em;
+    font-size: 0.9em;
   }
 
   .platform--current {
