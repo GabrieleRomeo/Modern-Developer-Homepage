@@ -123,6 +123,10 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   color: rgba(255,255,255,0.5);
 }
 
+.platform__date--Encyclopedia {
+  float: right;
+}
+
 .platform__footer {
   padding: 0 20px;
   overflow: hidden;
@@ -264,6 +268,10 @@ input.form__input--button {
     font-size: 0.750rem;
   }
 
+  .platform__date--Encyclopedia {
+    float: initial;
+  }
+
   .page__footer {
     text-align: left;
   }
@@ -345,6 +353,10 @@ input.form__input--button {
 
   .platform--coming:last-child {
     width: calc(50% - 7px);
+  }
+
+  .platform__date--Encyclopedia {
+    float: right;
   }
 
   input.form__input {
