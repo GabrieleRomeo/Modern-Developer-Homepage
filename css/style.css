@@ -100,7 +100,6 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 .platform {
   position: relative;
   margin-bottom: 1.2em;
-  color: #fff;
   border-radius: 2px 2px 2px 2px;
   -moz-border-radius: 2px 2px 2px 2px;
   -webkit-border-radius: 2px 2px 2px 2px;
@@ -111,14 +110,44 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   color: rgba(255,255,255,0.9);
 }
 
-.platform__name {
+.platform__name, .platform__link--a {
   margin-bottom: 1.14em;
   font-family: 'Roboto Slab', serif;
   font-size: 1.438em;
   font-weight: 300;
+  color: #fff;
 }
 
-.platform__date {
+.platform__link {
+  float: right;
+  margin-right: 15px;
+}
+
+.platform__link--label {
+  display: none;
+}
+
+.platform__link--a {
+  padding: 6px 37px;
+  border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+  font-size: 1.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: rgba(131, 6, 69, 0.29);
+}
+
+.platform__link--a:hover {
+  background-color: rgba(131, 6, 69, 0.39);
+  color:#fff;
+}
+
+.platform__link--label {
+  font-weight: initial;
+}
+
+.platform__date, .platform__link--label {
   font-size: 0.938em;
   color: rgba(255,255,255,0.5);
 }
@@ -264,8 +293,24 @@ input.form__input--button {
     margin-bottom: 0.8em;
     font-size: 1.250em;
   }
+
   .platform__paragraph {
     font-size: 0.750rem;
+  }
+
+  .platform__link {
+    float: initial;
+    margin-right: initial;
+    padding-left: 20px;
+  }
+
+  .platform__link--label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+
+  .platform__link--a {
+    padding: 4px 26px;
   }
 
   .platform__date--Encyclopedia {
