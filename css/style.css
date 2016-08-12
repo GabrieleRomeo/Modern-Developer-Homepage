@@ -118,13 +118,16 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   color: #fff;
 }
 
-.platform__link {
-  float: right;
-  margin-right: 15px;
+.platform__name {
+  float: left;
+  padding-top: .5em;
+  padding-left: .5em;
 }
 
-.platform__link--label {
-  display: none;
+.platform__link {
+  float: right;
+  margin-top: .9em;
+  margin-right: 1em;
 }
 
 .platform__link--a {
@@ -143,16 +146,34 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   color:#fff;
 }
 
-.platform__link--label {
+.platform__link__label--learn {
   font-weight: initial;
 }
 
-.platform__date, .platform__link--label {
+.platform__date, .platform__link__label--learn {
   font-size: 0.938em;
   color: rgba(255,255,255,0.5);
 }
 
-.platform__date--Encyclopedia {
+.platform__date--learn, .platform__link__label--learn {
+  display: none;
+}
+
+.platform__date {
+  padding-top: .9em;
+}
+
+.platform__figure {
+  float: left;
+  overflow: hidden;
+  margin: 0;
+}
+
+.platform__figure img {
+  float: left;
+}
+
+.platform__date--encyclopedia {
   float: right;
 }
 
@@ -245,6 +266,12 @@ input.form__input--button {
 
 /* Larger than tablet */
 @media screen and (min-width: 750px) {
+
+  img {
+    width: 28px;
+    height: auto;
+  }
+
   #topHeading {
     margin-top: 90px;
   }
@@ -252,6 +279,7 @@ input.form__input--button {
   .head__logo {
     margin-bottom: .5em;
   }
+
   .logo {
     margin-right: 23px;
     margin-bottom: 0;
@@ -286,12 +314,13 @@ input.form__input--button {
   .platform__footer {
     position: absolute;
     bottom: 0;
-    width: calc(100% - 40px);
+    width: calc(100% - 30px);
   }
 
   .platform__name {
-    margin-bottom: 0.8em;
-    font-size: 1.250em;
+    margin-bottom: 1em;
+    /*font-size: 1.250em;*/
+    font-size: 1em;
   }
 
   .platform__paragraph {
@@ -309,12 +338,22 @@ input.form__input--button {
     margin-bottom: 0.5em;
   }
 
-  .platform__link--a {
-    padding: 4px 26px;
+  .platform__link__label--learn {
+    display: block;
+    margin-bottom: .5em;
   }
 
-  .platform__date--Encyclopedia {
+  .platform__link--a {
+    padding: 8px 26px;
+  }
+
+  .platform__date, .platform__link__label--learn {
+    font-size: 0.838em;
+  }
+
+  .platform__date--encyclopedia {
     float: initial;
+    text-align: right;
   }
 
   .page__footer {
@@ -349,6 +388,29 @@ input.form__input--button {
   }
 }
 
+/* Larger than Laptop */
+@media screen and (min-width: 1024px) {
+
+  img { width: auto; }
+
+  .platform__link__label--learn {
+    display: none;
+  }
+
+  .platform__name {
+    font-size: 1.250em;
+  }
+
+  .platform__date--learn {
+    display: block;
+  }
+
+  .platform__footer {
+      bottom: 10px;
+      width: calc(100% - 40px);
+  }
+}
+
 /* Larger than Desktop HD */
 @media screen and (min-width: 1200px) {
   .col{
@@ -364,7 +426,6 @@ input.form__input--button {
   }
 
   .platform__name {
-    margin-bottom: 1.3em;
     font-size: 1.5em;
     font-weight: 400;
   }
@@ -388,6 +449,10 @@ input.form__input--button {
     font-size: 0.9em;
   }
 
+  .platform__date, .platform__link__label--learn {
+    font-size: initial;
+  }
+
   .platform--current {
     height: 408px;
   }
@@ -398,10 +463,6 @@ input.form__input--button {
 
   .platform--coming:last-child {
     width: calc(50% - 7px);
-  }
-
-  .platform__date--Encyclopedia {
-    float: right;
   }
 
   input.form__input {
