@@ -111,7 +111,6 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 }
 
 .platform__name, .platform__link--a {
-  margin-bottom: 1.14em;
   font-family: 'Roboto Slab', serif;
   font-size: 1.438em;
   font-weight: 300;
@@ -119,14 +118,13 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 }
 
 .platform__name {
-  float: left;
-  padding-top: .5em;
+  display: inline-block;
   padding-left: .5em;
 }
 
 .platform__link {
   float: right;
-  margin-top: .9em;
+  margin-top: 2em;
   margin-right: 1em;
 }
 
@@ -150,6 +148,12 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   font-weight: initial;
 }
 
+.platform__date {
+  position: absolute;
+  right: 0;
+  top: 25%;
+}
+
 .platform__date, .platform__link__label--learn {
   font-size: 0.938em;
   color: rgba(255,255,255,0.5);
@@ -159,27 +163,21 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   display: none;
 }
 
-.platform__date {
-  padding-top: .9em;
-}
-
 .platform__figure {
-  float: left;
-  overflow: hidden;
+  position: relative;
   margin: 0;
 }
 
-.platform__figure img {
-  float: left;
+.platform__name, .platform__figure img {
+  vertical-align: middle;
 }
 
-.platform__date--encyclopedia {
-  float: right;
+.platform__figure img {
+  display: inline-block;
 }
 
 .platform__footer {
-  padding: 0 20px;
-  overflow: hidden;
+  padding: 15px 20px;
 }
 
 .page__footer {
@@ -318,8 +316,6 @@ input.form__input--button {
   }
 
   .platform__name {
-    margin-bottom: 1em;
-    /*font-size: 1.250em;*/
     font-size: 1em;
   }
 
@@ -330,6 +326,7 @@ input.form__input--button {
   .platform__link {
     float: initial;
     margin-right: initial;
+    margin-top: 1em;
     padding-left: 20px;
   }
 
@@ -340,7 +337,6 @@ input.form__input--button {
 
   .platform__link__label--learn {
     display: block;
-    margin-bottom: .5em;
   }
 
   .platform__link--a {
@@ -351,9 +347,12 @@ input.form__input--button {
     font-size: 0.838em;
   }
 
+  .platform__date {
+    top: 22%;
+  }
+
   .platform__date--encyclopedia {
-    float: initial;
-    text-align: right;
+    top: -50%;
   }
 
   .page__footer {
