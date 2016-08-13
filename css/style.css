@@ -46,7 +46,10 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 .candyPink { background-color: rgb(233, 120, 119); }
 .amethyst { background-color: rgb(162, 105, 193); }
 .uBlue { background-color: rgb(106, 136, 221); }
-.input--invalid { background-color: #FDD !important; }
+.input--invalid {
+  border-color: #e97877 !important;
+  background-color: #FDD !important;
+}
 
 #topHeading {
   margin-top: 25px;
@@ -206,10 +209,16 @@ input.form__input--email {
   -webkit-border-radius: 2px 0px 0px 2px;
 }
 
+input.form__input--email:focus {
+  outline: none;
+  border-color: #eae4e4;
+  -webkit-box-shadow: none;
+}
+
 input.form__input--button {
   width: 75px;
   margin-left: -5px;
-  font-size: 0.98em;
+  font-size: 1.1em;
   font-weight: 300;
   color: rgb(255, 255, 255);
   background-color: rgb(242, 128, 180);
@@ -354,10 +363,10 @@ input.form__input--button:active {
     padding: 8px 26px;
   }
 
-   .platform__date {
+  .platform__date {
     top: 25%;
     line-height: 1.4em;
-   }
+  }
 
   .platform__date--encyclopedia {
     top: -50%;
