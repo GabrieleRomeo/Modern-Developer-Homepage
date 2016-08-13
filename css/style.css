@@ -125,7 +125,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 .platform__link {
   float: right;
-  margin-top: 2.2em;
+  margin-top: 1.1em;
   margin-right: 1em;
 }
 
@@ -180,8 +180,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 }
 
 .platform__footer {
-  padding: 15px 20px;
-  z-index:-1;
+  padding: 0 20px 20px 20px;
 }
 
 .page__footer {
