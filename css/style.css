@@ -152,7 +152,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 .platform__date {
   position: absolute;
   right: 0;
-  top: 25%;
+  top: 30%;
 }
 
 .platform__date, .platform__link__label--learn {
@@ -353,6 +353,7 @@ input.form__input--button:active {
   }
 
    .platform__date {
+    top: 25%;
     line-height: 1.4em;
    }
 
