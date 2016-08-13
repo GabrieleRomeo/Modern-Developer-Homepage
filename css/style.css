@@ -113,7 +113,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 .platform__name, .platform__link--a {
   font-family: 'Roboto Slab', serif;
   font-size: 1.438em;
-  font-weight: 300;
+  font-weight: 400;
   color: #fff;
 }
 
@@ -343,16 +343,16 @@ input.form__input--button {
     padding: 8px 26px;
   }
 
-  .platform__date, .platform__link__label--learn {
-    font-size: 0.838em;
-  }
-
-  .platform__date {
-    top: 22%;
-  }
+   .platform__date {
+    line-height: 1.4em;
+   }
 
   .platform__date--encyclopedia {
     top: -50%;
+  }
+
+  .platform__date, .platform__link__label--learn {
+    font-size: 0.838em;
   }
 
   .page__footer {
@@ -426,7 +426,6 @@ input.form__input--button {
 
   .platform__name {
     font-size: 1.5em;
-    font-weight: 400;
   }
 
   #logo__motto {
