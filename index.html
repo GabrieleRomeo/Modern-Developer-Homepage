@@ -165,13 +165,13 @@
             Get First Access
           </label>
           <input class="form__input form__input--email"
-                 id="emailInput"
-                 name="emailInput"
-                 value=""
-                 title="GetAccess"
+                 id="email"
+                 name="email"
                  placeholder="Your Email Address"
                  tabindex="2"
-                 type="text">
+                 type="email"
+                 pattern="[^ @]*@[^ @]*"
+                 required aria-required="true">
           <input class="form__input form__input--button"
                  id="submit"
                  name="submit"
