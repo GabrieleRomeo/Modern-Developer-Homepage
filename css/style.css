@@ -355,6 +355,10 @@ input.form__input--button {
     font-size: 0.838em;
   }
 
+  .platform__link__label--learn {
+    margin-bottom: 1.5em;
+  }
+
   .page__footer {
     text-align: left;
   }
