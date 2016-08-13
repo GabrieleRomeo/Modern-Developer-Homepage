@@ -132,9 +132,9 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 .platform__link--a {
   padding: 6px 37px;
-  border-radius: 5px 5px 5px 5px;
-    -moz-border-radius: 5px 5px 5px 5px;
-    -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    -webkit-border-radius: 2px 2px 2px 2px;
   font-size: 1.2em;
   text-decoration: none;
   text-transform: uppercase;
