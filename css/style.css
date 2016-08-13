@@ -46,6 +46,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 .candyPink { background-color: rgb(233, 120, 119); }
 .amethyst { background-color: rgb(162, 105, 193); }
 .uBlue { background-color: rgb(106, 136, 221); }
+.input--invalid { background-color: #FDD !important; }
 
 #topHeading {
   margin-top: 25px;
@@ -213,6 +214,14 @@ input.form__input--button {
   border-radius: 0px 2px 2px 0px;
   -moz-border-radius: 0px 2px 2px 0px;
   -webkit-border-radius: 0px 2px 2px 0px;
+}
+
+input.form__input--button:hover {
+  color: rgb(255, 255, 255);
+}
+
+input.form__input--button:active {
+  background-color: rgb(255, 57, 147);
 }
 
 .contact {
