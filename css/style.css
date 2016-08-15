@@ -196,6 +196,10 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   color: rgb(161, 97, 194);
 }
 
+.error--email {
+    display: none;
+}
+
 input.form__input {
   border: 0;
 }
