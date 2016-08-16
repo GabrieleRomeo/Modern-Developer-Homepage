@@ -323,10 +323,10 @@ input.form__input--button:active {
   }
 
   .platform--current {
-    height: 330px;
+    min-height: 480px;
   }
   .platform--coming {
-    min-height: calc((330px / 2) - 5px);
+    min-height: calc((480px / 2) - 5px);
   }
 
   .platform--coming:last-child {
@@ -434,7 +434,6 @@ input.form__input--button:active {
   }
 
   .platform__footer {
-      bottom: 10px;
       width: calc(100% - 40px);
   }
 }
