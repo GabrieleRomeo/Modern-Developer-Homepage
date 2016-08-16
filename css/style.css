@@ -468,7 +468,6 @@ input.form__input--button:active {
 
   .platform {
     width: calc(25% - 10.5px);
-    margin-bottom: 14px;
   }
 
   .platform__paragraph {
@@ -481,10 +480,6 @@ input.form__input--button:active {
 
   .platform--current {
     height: 408px;
-  }
-
-  .platform--coming {
-    min-height: calc((408px / 2) - 7px);
   }
 
   .platform--coming:last-child {
