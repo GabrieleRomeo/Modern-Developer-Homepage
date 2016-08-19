@@ -123,7 +123,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 .platform__name {
   display: inline-block;
-  padding-left: .5em;
+  padding-left: 0.25em;
 }
 
 .platform__link {
@@ -155,14 +155,17 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 }
 
 .platform__date {
-  position: absolute;
-  right: 0;
-  top: 30%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 30%;
 }
 
 .platform__date, .platform__link__label--learn {
   font-size: 0.938em;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.7);
 }
 
 .platform__date--learn, .platform__link__label--learn {
@@ -367,14 +370,12 @@ input.form__input--button:active {
     padding: 8px 26px;
   }
 
-  .platform__date {
-    top: 25%;
-    line-height: 1.4em;
-  }
-
   .platform__date--encyclopedia {
-    top: -50%;
-  }
+    top: -39%;
+    bottom: initial;
+   }
+
+  .platform__date { height: 56%; }
 
   .platform__date, .platform__link__label--learn {
     font-size: 0.838em;
@@ -427,6 +428,10 @@ input.form__input--button:active {
 
   .platform__name {
     font-size: 1.250em;
+  }
+
+  .platform__date {
+    height: 40%;
   }
 
   .platform__date--learn {
