@@ -29,7 +29,10 @@ app.use(bodyParser());
 app.use(express.static(__dirname + '/client'));
 
 /* ---------- Routes ------------ */
-app.get('/', function (req, res) {res.sendfile('./client/index.html')});
+app.get('/', function (req, res) {
+    res.sendfile('./client/index.html');
+});
+
 app.post('/api/mailchimp/early-access', routes.mailchimp.earlyAccess);
 
 /* Start it up */

@@ -10,12 +10,13 @@ module.exports = function (grunt) {
 
         // Watch Config
         watch: {
-            options: {
-                livereload: true
+            client: {
+                files: [ 'client/**/*.js' ],
+                tasks: [ 'jshint' ]
             },
             express: {
                 files:  [ 'app.js', 'routes/**.js', '!**/node_modules/**', '!Gruntfile.js' ],
-                tasks:  [ 'express:dev' ],
+                tasks:  [ 'jshint', 'express:dev' ],
                 options: {
                     nospawn: true // Without this option specified express won't be reloaded
                 }
@@ -25,13 +26,14 @@ module.exports = function (grunt) {
         // Hint Config
         jshint: {
             options: {
-                jshintrc: '.jshintrc'
+                jshintrc: '.jshintrc',
+                force: true
             },
             all: [
                 'Gruntfile.js',
-                'assets/scripts/**/*.js',
-                '!assets/scripts/vendor/*',
-                'test/spec/**/*.js'
+                'app.js',
+                'routes/**/*.js',
+                'client/**/*.js'
             ]
         },
 

@@ -1,10 +1,10 @@
-(function(win) {
+(function (win) {
     'use strict';
 
     var doc       = win.document;
-    //var API       = 'https://moderndeveloper.com/api';
-    var API       = 'http://localhost:3000/api';
-    var errorMsg, form;
+    var API       = 'https://moderndeveloper.com/api';
+    //var API       = 'http://localhost:3000/api';
+    var errorMsg, form, email, submit;
     var ERRORS    = {
         'List_AlreadySubscribed': 'You have already subscribed to receive email.'
     };
@@ -13,7 +13,7 @@
         errorMsg  = doc.querySelector('.error--email');
         form      = doc.querySelector('#getFirstAccess');
 
-        var email = form.elements.namedItem('email'),
+        email = form.elements.namedItem('email');
         submit    = form.elements.namedItem('submit');
 
         email.addEventListener('keyup', function () {
@@ -42,7 +42,7 @@
         }, false);
     });
 
-    function subscribeMailchimp () {
+    function subscribeMailchimp() {
         var httpRequest = new XMLHttpRequest();
         errorMsg.textContent = 'Subscribing...';
 
@@ -51,7 +51,9 @@
         httpRequest.setRequestHeader('Cache-Control', 'no-cache');
 
         httpRequest.onreadystatechange = function () {
-            if (httpRequest.readyState !== 4) return;
+            if (httpRequest.readyState !== 4) {
+                return;
+            }
             var response = JSON.parse(httpRequest.responseText);
 
             if (response.success) {
