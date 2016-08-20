@@ -2,7 +2,8 @@
     'use strict';
 
     var doc       = win.document;
-    var API       = 'https://moderndeveloper.com/api';
+    //var API       = 'https://moderndeveloper.com/api';
+    var API       = 'http://localhost:3000/api';
     var errorMsg, form;
     var ERRORS    = {
         'List_AlreadySubscribed': 'You have already subscribed to receive email.'
