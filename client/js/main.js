@@ -1,20 +1,26 @@
-(function (win) {
-    'use strict';
+'use strict';
 
-    var doc       = win.document;
-    var API       = 'https://moderndeveloper.com/api';
-    //var API       = 'http://localhost:3000/api';
-    var errorMsg, form, email, submit;
-    var ERRORS    = {
+(function(win) {
+
+    var doc     = win.document;
+    var API     = 'https://moderndeveloper.com/api';
+    var ERRORS  = {
         'List_AlreadySubscribed': 'You have already subscribed to receive email.'
     };
+
+    var sizewait, errorMsg, form;
+
 
     doc.addEventListener('DOMContentLoaded', function () {
         errorMsg  = doc.querySelector('.error--email');
         form      = doc.querySelector('#getFirstAccess');
 
-        email = form.elements.namedItem('email');
-        submit    = form.elements.namedItem('submit');
+        var email  = form.elements.namedItem('email'),
+            submit = form.elements.namedItem('submit');
+
+        // Initialize the animation
+
+        animation.init();
 
         email.addEventListener('keyup', function () {
             if (!this.validity.valid) {
@@ -42,7 +48,18 @@
         }, false);
     });
 
-    function subscribeMailchimp() {
+
+    win.addEventListener('resize', function () {
+        if(typeof sizewait !== 'undefined'){
+            clearTimeout(sizewait);
+        }
+        sizewait = setTimeout(function() {
+            animation.handleResize();
+        }, 200);
+    });
+
+
+    function subscribeMailchimp () {
         var httpRequest = new XMLHttpRequest();
         errorMsg.textContent = 'Subscribing...';
 
@@ -51,9 +68,7 @@
         httpRequest.setRequestHeader('Cache-Control', 'no-cache');
 
         httpRequest.onreadystatechange = function () {
-            if (httpRequest.readyState !== 4) {
-                return;
-            }
+            if (httpRequest.readyState !== 4) return;
             var response = JSON.parse(httpRequest.responseText);
 
             if (response.success) {

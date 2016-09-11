@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>Modern Developer</title>
     <meta name="description" content="Modern Developer">
-    <meta name="author" content="">
+    <meta name="author" content="Gabriele Romeo">
     <meta name="apple-mobile-web-app-title" content="Modern Developer">
     <meta name="application-name" content="Modern Developer">
 
@@ -32,180 +32,294 @@
 
   <!-- Javascript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/ScrollToPlugin.min.js"></script>
+    <script src="js/animation.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body>
 
-<!-- Page Header -->
+    <!-- Page Container -->
 
-  <header class="container" id="topHeading" role="banner">
-    <div class="offset-by-two eight columns head__logo">
-      <ul class="logo">
-        <li class="logo__block logo__block--1 mantis"></li>
-        <li class="logo__block logo__block--2 turquoise"></li>
-        <li class="logo__block logo__block--3 pink"></li>
-        <li class="logo__block logo__block--4 candyPink"></li>
-      </ul>
-      <h2 id="logo__title">
-        <strong>Modern</strong> Developer
-      </h2>
-    </div>
-    <div class="twelve columns">
-      <p id="logo__motto">
-      Where Developers Become Exceptional and Build Extraordinary Products that Advance Humanity
-      </p>
-    </div>
-  </header>
+    <div class="container">
 
-<!-- Platforms -->
+      <!-- Page Header -->
 
-  <section class="container container--platforms">
-      <article class="span3 col platform platform--current pink">
-        <p class="platform__paragraph">
-          An elite programming academy for web programmers and cybersecurity engineers
-        </p>
-        <p class="platform__link">
-        <label class="platform__link__label--learn">Launched 2016</label>
-            <label>
-                <span>
-                    <a class="platform__link--a"
-                       href="https://learn.moderndeveloper.com/"
-                       tabindex="1"
-                       alt="Learn.ModernDeveloper.com"
-                       title="Learn.ModernDeveloper.com">go</a>
+      <header class="header" role="banner">
+        <div class="head__logo offset-by-two eight columns">
+          <ul class="logo">
+            <li class="logo__block logo__block--1 mantis"></li>
+            <li class="logo__block logo__block--2 turquoise"></li>
+            <li class="logo__block logo__block--3 pink"></li>
+            <li class="logo__block logo__block--4 candyPink"></li>
+          </ul>
+          <h2 id="logo__title">
+            <strong>Modern</strong> Developer
+          </h2>
+        </div>
+        <div class="twelve columns">
+          <p id="logo__motto">
+          Where Developers Become Exceptional and Build Extraordinary Products that Advance Humanity
+          </p>
+        </div>
+      </header>
+
+      <!-- Platforms -->
+
+      <main class="main" role="main">
+        <div class="container__platforms">
+          <article class="platform
+                          platform__current
+                          platform__current--learn pink span3"
+                   id="learn">
+            <section class="platform__definition">
+              <p class="platform__introduction">
+                An elite programming academy for web programmers and
+                cybersecurity engineers
+              </p>
+              <p class="platform__description">
+                Learn.Modern Developer, launched January 2016, is an elite
+                programming academy for web programmers and cybersecurity engineers.
+                We help developers and aspiring developers become highly skilled,
+                relentless, and successful. Get the most ambitous and most
+                comprehensive web programming education; then get a high-paying
+                programming career or develop a massive project you can benefit
+                from for years to come. Choose from these career paths:
+                <span class="font-weight-500">
+                  fullstack, frontend, and backend developer.
                 </span>
-            </label>
-        </p>
-        <footer class="platform__footer">
-          <figure class="platform__figure">
-            <img src="images/learn.png"
-                 alt="Learn.ModernDeveloper.com">
-            <figcaption class="platform__name">Learn</figcaption>
-            <figcaption class="platform__date
-                               platform__date--learn">
-              Launched
-            </figcaption>
-          </figure>
-        </footer>
-      </article>
-      <article class="span3 col platform platform--current amethyst">
-        <p class="platform__paragraph">
-          The largest, most comprehensible and reliable encyclopedic resource on technology, including the WWW and programming—a better Wikipedia
-        </p>
-        <footer class="platform__footer">
-          <figure class="platform__figure">
-            <img src="images/encyclopedia.png"
-                 alt="Encyclopedia.ModernDeveloper.com">
-            <figcaption class="platform__name platform__name--encyclopedia">
-              Encyclopedia
-            </figcaption>
-            <figcaption class="platform__date
-                               platform__date--encyclopedia">
-              Private Beta
-            </figcaption>
-          </figure>
-        </footer>
-      </article>
+              </p>
+              <p class="platform__description--more">
+                HIDDEN PARAGRAPH - more info here ......
+              </p>
+              <p class="platform__status">
+                  Ready now
+              </p>
+            </section>
+            <p class="platform__link">
+                <label>
+                    <span>
+                        <a class="link__anchor"
+                           href="https://learn.moderndeveloper.com/"
+                           tabindex="1"
+                           alt="Learn.ModernDeveloper.com"
+                           title="Learn.ModernDeveloper.com">go</a>
+                    </span>
+                </label>
+            </p>
+            <footer class="platform__footer">
+              <figure class="platform__figure">
+                <img src="images/learn.png"
+                     alt="Learn.ModernDeveloper.com">
+                <figcaption class="platform__name">Learn</figcaption>
+                <figcaption class="platform__launching
+                                   platform__launching--learn">
+                  ready now
+                </figcaption>
+              </figure>
+            </footer>
+          </article>
+          <article class="platform
+                          platform__current
+                          platform__current--encyclopedia amethyst span3"
+                   id="encyclopedia">
+            <section class="platform__definition">
+              <p class="platform__introduction">
+                The largest, most comprehensible and reliable encyclopedic
+                resource on technology, including the WWW and programming—a
+                better Wikipedia
+              </p>
+              <p class="platform__description">
+                An encyclopedic resource so relevant and comprehensive—so clear and
+                comprehensible—as to make web and mobile development and programming
+                knowledge as accessible as water flowing from the tap—clear,
+                quenchable, abundant.
+              </p>
+              <p class="platform__description--more">
+                HIDDEN PARAGRAPH - more info here ......
+              </p>
+              <p class="platform__status">
+                  Currently in Alpha—Launching early 2017
+              </p>
+            </section>
+            <footer class="platform__footer">
+              <figure class="platform__figure">
+                <img src="images/encyclopedia.png"
+                     alt="Encyclopedia.ModernDeveloper.com">
+                <figcaption class="platform__name platform__name--encyclopedia">
+                  Encyclopedia
+                </figcaption>
+                <figcaption class="platform__launching
+                                   platform__launching--encyclopedia">
+                  Private Beta
+                </figcaption>
+              </figure>
+            </footer>
+          </article>
 
-      <article class="span3 col platform platform--coming turquoise">
-        <p class="platform__paragraph">
-          The technological rhythms and ethos that are crucial and relevant for UI designers, modern developers, and software engineers
-        </p>
-        <footer class="platform__footer">
-          <figure class="platform__figure">
-            <img src="images/know.png"
-                 alt="Know.ModernDeveloper.com">
-            <figcaption class="platform__name">Know</figcaption>
-            <figcaption class="platform__date">
-              Late 2017
-            </figcaption>
-          </figure>
-        </footer>
-      </article>
-      <article class="span3 col platform platform--coming candyPink">
-        <p class="platform__paragraph">
-          The most sophisticated question-and-answer platform for developers and software engineers
-        </p>
-        <footer class="platform__footer">
-          <figure class="platform__figure">
-            <img src="images/qa.png"
-                 alt="QA.ModernDeveloper.com">
-            <figcaption class="platform__name">QA</figcaption>
-            <figcaption class="platform__date">
-              Private Beta
-            </figcaption>
-          </figure>
-        </footer>
-      </article>
-      <article class="span6 col platform platform--coming uBlue">
-        <p class="platform__paragraph">
-          Our developers build projects that solve many of the major problems that afflict humanity, and they create groundbreaking projects that advance humanity
-        </p>
-        <footer class="platform__footer">
-          <figure class="platform__figure">
-            <img src="images/labs.png"
-                 alt="Lab.ModernDeveloper.com">
-            <figcaption class="platform__name">Lab</figcaption>
-            <figcaption class="platform__date">
-              Late 2017
-            </figcaption>
-          </figure>
-        </footer>
-      </article>
-  </section>
+          <article class="platform
+                          platform__coming
+                          platform__coming--know turquoise span3"
+                   id="know">
+            <section class="platform__definition">
+              <p class="platform__introduction">
+                The technological rhythms and ethos that are crucial and
+                relevant for UI designers, modern developers, and software
+                engineers
+              </p>
+              <p class="platform__description">
+                Know what you must or risk becoming outmoded—replaced by robotic,
+                self-configuring platforms and frameworks and a new breed of highly
+                knowledgeable, informed, and skilled developers.
+              </p>
+              <p class="platform__description--more">
+                HIDDEN PARAGRAPH - more info here ......
+              </p>
+              <p class="platform__status">
+                Late 2017
+              </p>
+            </section>
+            <footer class="platform__footer">
+              <figure class="platform__figure">
+                <img src="images/know.png"
+                     alt="Know.ModernDeveloper.com">
+                <figcaption class="platform__name">Know</figcaption>
+                <figcaption class="platform__launching">
+                  Late 2017
+                </figcaption>
+              </figure>
+            </footer>
+          </article>
+          <article class="platform
+                          platform__coming
+                          platform__coming--qa candyPink span3 edge"
+                   id="qa">
+            <section class="platform__definition">
+              <p class="platform__introduction">
+                The most sophisticated question-and-answer platform for
+                developers and software engineers
+              </p>
+              <p class="platform__description">
+                The most sophisticated platform for web and mobile development
+                and programming-related queries.
+              </p>
+              <p class="platform__description--more">
+                HIDDEN PARAGRAPH - more info here ......
+              </p>
+              <p class="platform__status">
+                Private Beta
+              </p>
+            </section>
+            <footer class="platform__footer">
+              <figure class="platform__figure">
+                <img src="images/qa.png"
+                     alt="QA.ModernDeveloper.com">
+                <figcaption class="platform__name">QA</figcaption>
+                <figcaption class="platform__launching">
+                  Late 2017
+                </figcaption>
+              </figure>
+            </footer>
+          </article>
+          <article class="platform
+                          platform__coming
+                          platform__coming--lab uBlue span6 edge"
+                   id="lab">
+            <section class="platform__definition">
+              <p class="platform__introduction">
+                 Our developers build projects that solve many of the major
+                 problems that afflict humanity, and they create groundbreaking
+                 projects that advance humanity
+              </p>
+              <p class="platform__description">
+                Our developers build products that use collective human intelligence
+                to overwhelm big problems in little time. Do you want to solve
+                homelessness in San Francisco or build better products than Google?
+                Join our hyper-ambitious lab.
+              </p>
+              <p class="platform__description--more">
+                HIDDEN PARAGRAPH - more info here ......
+              </p>
+              <p class="platform__status">
+                Currently in Beta—Launching early 2017
+              </p>
+            </section>
+            <footer class="platform__footer">
+              <figure class="platform__figure">
+                <img src="images/labs.png"
+                     alt="Lab.ModernDeveloper.com">
+                <figcaption class="platform__name">Lab</figcaption>
+                <figcaption class="platform__launching">
+                  Late 2017
+                </figcaption>
+              </figure>
+            </footer>
+          </article>
+        </div>
+      </main>
 
-<!-- Page Footer -->
+      <!-- Page Footer -->
 
-  <footer class="container page__footer" role="contentinfo">
-    <div class="row">
-      <div class="span6 col">
-        <form id="getFirstAccess">
-          <label for="emailInput" class="label--email">
-            Be among the first users of Encyclopedia, QA, and Know: 
-          </label>
-          <input class="form__input form__input--email"
-                 id="email"
-                 name="email"
-                 placeholder="Your Email Address"
-                 tabindex="2"
-                 type="email"
-                 pattern="[^ @]*@[^ @]*"
-                 aria-required="true"
-                 required >
-          <input class="form__input form__input--button"
-                 id="submit"
-                 name="submit"
-                 value="go"
-                 tabindex="3"
-                 type="submit"
-                 disabled>
-        </form>
-        <p class="label--email error--email"> Thank you for your interest! </p>
-      </div>
-      <div class="span6 col contact">
-        <dl>
-          <dt class="contact__title">&copy; 2016 Modern Developer Inc.</dt>
-          <dd class="contact__email">
-              <a class="email__link"
-                 href="mailto:whatsup%5Bat%5Dmoderndeveloper%5Bdot%5Dcom">
-                whatsup<span class="visuallyhidden">-SPAM-PROTECTION</span>@moderndeveloper.com
-              </a>
-          </dd>
-        </dl>
-      </div>
-    </div>
-  </footer>
-  
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  
-    ga('create', 'UA-71144473-1', 'auto');
-    ga('send', 'pageview');
-  
-  </script>
-  
+      <footer class="footer" role="contentinfo">
+        <div class="row">
+          <div class="span6 col">
+            <form id="getFirstAccess">
+              <label for="email" class="label--email">
+                Be among the first users of Encyclopedia, QA, and Know:
+              </label>
+              <input class="input input__email"
+                     id="email"
+                     name="email"
+                     placeholder="Your Email Address"
+                     tabindex="2"
+                     type="email"
+                     pattern="[^ @]*@[^ @]*"
+                     aria-required="true"
+                     required >
+              <input class="input input__button"
+                     id="submit"
+                     name="submit"
+                     value="go"
+                     tabindex="3"
+                     type="submit"
+                     disabled>
+            </form>
+            <p class="label--email error--email"> Thank you for your interest! </p>
+          </div>
+          <div class="contact span6 col">
+            <dl>
+              <dt class="contact__title">&copy; 2016 Modern Developer Inc.</dt>
+              <dd class="contact__email">
+                  <a class="email__link"
+                     href="mailto:whatsup%5Bat%5Dmoderndeveloper%5Bdot%5Dcom">
+                    whatsup<span class="visuallyhidden">-SPAM-PROTECTION</span>@moderndeveloper.com
+                  </a>
+              </dd>
+            </dl>
+          </div>
+          <div class="developer twelve columns">
+            <hr></hr>
+            <img class="md-student-developer" src="images/gabriele_romeo.jpg" alt="Developer - Gabriele Romeo">
+            <p class="md-student-developer">
+              Site developed by Learn.Modern Developer<br> student Gabriele Romeo
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m);
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-71144473-1', 'auto');
+            ga('send', 'pageview');
+      </script>
+
+    </div>     <!-- END Page Container -->
   </body>
 </html>

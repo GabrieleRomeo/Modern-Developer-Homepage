@@ -12,10 +12,6 @@ body{
   line-height: 1.2em;
 }
 
-header {
-  text-align: center;
-}
-
 pre, blockquote, dl, figure, table, p, ul, ol, form {
   margin-bottom: 0;
 }
@@ -36,8 +32,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   max-width: 1280px;
 }
 
-.container--platforms {
-  margin-bottom: 4.3em;
+.container__platforms {
+  overflow: hidden;
 }
 
 .mantis { background-color: rgb(116, 201, 103); }
@@ -46,14 +42,24 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 .candyPink { background-color: rgb(233, 120, 119); }
 .amethyst { background-color: rgb(162, 105, 193); }
 .uBlue { background-color: rgb(106, 136, 221); }
+.font-weight-500 { font-weight: 500; }
 .input--invalid {
   border-color: #e97877 !important;
   background-color: #FDD !important;
 }
+.edge { margin-right:0!important; }
 
-#topHeading {
-  margin-top: 25px;
+.header { margin-top: 25px; }
+
+.header,
+.main {
+  overflow: hidden;
 }
+
+.header,
+.footer { text-align: center; }
+
+.footer { visibility:hidden; }
 
 .logo {
   display: inline-block;
@@ -66,9 +72,9 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   display: block;
   margin: 0 auto 2px;
   height: 13px;
-  border-radius: 2px 2px 2px 2px;
-  -moz-border-radius: 2px 2px 2px 2px;
-  -webkit-border-radius: 2px 2px 2px 2px;
+  border-radius: 1px;
+  -moz-border-radius: 1px 1px 1px 1px;
+  -webkit-border-radius: 1px 1px 1px 1px;
 }
 
 .logo__block--1 {
@@ -107,14 +113,21 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   border-radius: 2px 2px 2px 2px;
   -moz-border-radius: 2px 2px 2px 2px;
   -webkit-border-radius: 2px 2px 2px 2px;
+  cursor: pointer;
+  visibility:hidden;
 }
 
-.platform__paragraph {
+.platform__definition {
   padding: 20px;
   color: rgba(255,255,255,0.9);
 }
 
-.platform__name, .platform__link--a {
+.platform__status {
+  padding: 3em 0 6em;
+}
+
+.platform__name,
+.link__anchor {
   font-family: 'Roboto Slab', serif;
   font-size: 1.438em;
   font-weight: 400;
@@ -132,7 +145,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   margin-right: 1em;
 }
 
-.platform__link--a {
+.link__anchor {
   position:relative;
   padding: 6px 37px;
   border-radius: 2px 2px 2px 2px;
@@ -145,31 +158,32 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   z-index: 1;
 }
 
-.platform__link--a:hover {
+.link__anchor:hover {
   background-color: rgba(131, 6, 69, 0.39);
   color:#fff;
 }
 
-.platform__link__label--learn {
-  font-weight: initial;
+.platform__launching {
+  position: absolute;
+  right: 0;
+  top: 30%;
 }
 
-.platform__date {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    height: 30%;
-}
-
-.platform__date, .platform__link__label--learn {
+.platform__launching {
   font-size: 0.938em;
   color: rgba(255,255,255,0.7);
 }
 
-.platform__date--learn, .platform__link__label--learn {
+.platform__launching--learn,
+.platform__description,
+.platform__status,
+.error--email {
   display: none;
+}
+
+.platform__description--more {
+  visibility: hidden;
+  margin-top: 25px;
 }
 
 .platform__figure {
@@ -177,7 +191,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   margin: 0;
 }
 
-.platform__name, .platform__figure img {
+.platform__name,
+.platform__figure img {
   vertical-align: middle;
 }
 
@@ -189,25 +204,17 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   padding: 0 20px 20px 20px;
 }
 
-.page__footer {
-  text-align: center;
-}
-
 .label--email {
   font-weight: 300;
   letter-spacing: 1px;
   color: rgb(161, 97, 194);
 }
 
-.error--email {
-    display: none;
-}
-
-input.form__input {
+input.input {
   border: 0;
 }
 
-input.form__input--email {
+input.input__email {
   width: calc(100% - 76px);
   background-color: #f4f4f4;
   border: solid 1px #eae4e4;
@@ -216,13 +223,13 @@ input.form__input--email {
   -webkit-border-radius: 2px 0px 0px 2px;
 }
 
-input.form__input--email:focus {
+input.input__email:focus {
   outline: none;
   border-color: #eae4e4;
   -webkit-box-shadow: none;
 }
 
-input.form__input--button {
+input.input__button {
   width: 75px;
   margin-left: -6px;
   font-size: 1em;
@@ -234,11 +241,11 @@ input.form__input--button {
   -webkit-border-radius: 0px 2px 2px 0px;
 }
 
-input.form__input--button:hover {
+input.input__button:hover {
   color: rgb(255, 255, 255);
 }
 
-input.form__input--button:active {
+input.input__button:active {
   background-color: rgb(255, 57, 147);
 }
 
@@ -262,19 +269,28 @@ input.form__input--button:active {
   cursor: pointer;
 }
 
+.developer {
+  margin-bottom: 100px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.developer hr {
+  width: 80%;
+  margin: 3rem auto 4rem;
+  border-top: 1px solid #ddd7d7;
+}
+
+.developer img {
+  width: 75px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border: 4px solid #534f4f;
+}
+
 /* Custom Breakpoints */
 
-@media screen and (max-width: 64em) {
-    body {
-        font-size:90%;
-    }
-}
-
-@media screen and (max-width: 30em) {
-    body {
-        font-size:80%;
-    }
-}
 
 /* Larger than mobile */
 @media (min-width: 550px) {
@@ -289,16 +305,30 @@ input.form__input--button:active {
   }
 }
 
+/* 64em = 1024px */
+@media screen and (max-width: 64em) {
+    body {
+        font-size:90%;
+    }
+}
+
+/* 30em = 480px */
+@media screen and (max-width: 30em) {
+    body {
+        font-size:80%;
+    }
+}
+
 /* Larger than tablet */
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 767px) {
 
   img {
     width: 28px;
     height: auto;
   }
 
-  #topHeading {
-    margin-top: 90px;
+  .header {
+    margin-top: 28px;
   }
 
   .head__logo {
@@ -320,20 +350,51 @@ input.form__input--button:active {
     margin-bottom: 4.5em;
   }
 
+  .main {
+    position: relative;
+    min-height: 550px;
+    margin-bottom: 2.5em;
+  }
+
+  .container__platforms {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
   .platform {
-    width: calc(25% - 7.5px);
-    margin-bottom: 10px;
+    position: absolute;
+    width: 24%;
+    margin-right: 1.33333333333%;
+    margin-bottom: 0;
   }
 
-  .platform--current {
-    min-height: 480px;
-  }
-  .platform--coming {
-    min-height: calc((480px / 2) - 5px);
+  .platform__current {
+    height: 80%;
   }
 
-  .platform--coming:last-child {
-    width: calc(50% - 5px);
+  .platform__current--encyclopedia {
+    left: 25.333333%;
+  }
+
+  .platform__coming {
+    height: 38.66666666666667%;
+  }
+
+  .platform__coming--qa {
+    top: 0;
+    right: 0;
+  }
+
+  .platform__coming--know {
+    right: 24%;
+  }
+
+  .platform__coming--lab {
+    right: 0;
+    top: 41.333333%;
+    width: 49.333333%;
+    margin-bottom: 0;
   }
 
   .platform__footer {
@@ -346,7 +407,7 @@ input.form__input--button:active {
     font-size: 1em;
   }
 
-  .platform__paragraph {
+  .platform__definition {
     font-size: 0.750rem;
   }
 
@@ -357,50 +418,30 @@ input.form__input--button:active {
     padding-left: 20px;
   }
 
-  .platform__link--label {
-    display: block;
-    margin-bottom: 0.5em;
-  }
-
-  .platform__link__label--learn {
-    display: block;
-  }
-
-  .platform__link--a {
+  .link__anchor {
     padding: 8px 26px;
   }
 
-  .platform__date--encyclopedia {
-    top: -39%;
-    bottom: initial;
-   }
+  .platform__launching {
+    top: 25%;
+    line-height: 1.4em;
+  }
 
-  .platform__date { height: 56%; }
+  .platform__launching--encyclopedia {
+    top: -50%;
+  }
 
-  .platform__date, .platform__link__label--learn {
+  .platform__launching {
     font-size: 0.838em;
   }
 
-  .platform__link__label--learn {
-    margin-bottom: 1.5em;
-  }
-
-  .page__footer {
+  .footer {
     text-align: left;
   }
 
-  .label--email {
-    padding-left: 20px;
-  }
-
-  input.form__input--email {
+  input.input__email {
     padding-left: 20px;
     width: calc(100% - 76px);
-  }
-
-  .contact {
-    margin-top: 10px;
-    text-align: right;
   }
 
   .col{
@@ -412,9 +453,12 @@ input.form__input--button:active {
     margin-left: 0;
   }
 
-  .span6{
-    width: 49.25%;
+  .contact {
+    float: right;
+    margin-top: 10px;
+    text-align: right;
   }
+
 }
 
 /* Larger than Laptop */
@@ -422,19 +466,11 @@ input.form__input--button:active {
 
   img { width: auto; }
 
-  .platform__link__label--learn {
-    display: none;
-  }
-
   .platform__name {
     font-size: 1.250em;
   }
 
-  .platform__date {
-    height: 40%;
-  }
-
-  .platform__date--learn {
+  .platform__launching--learn {
     display: block;
   }
 
@@ -445,6 +481,7 @@ input.form__input--button:active {
 
 /* Larger than Desktop HD */
 @media screen and (min-width: 1200px) {
+
   .col{
     margin-left: 14px;
   }
@@ -464,52 +501,31 @@ input.form__input--button:active {
   #logo__motto {
     font-size: 1.125em;
     line-height: 1.333em;
-    margin-bottom: 4.36em;
+    margin-bottom: 2.36em;
   }
 
-  .container--platforms {
+  .container__platforms {
     margin-bottom: 3.3em;
   }
 
-  .platform {
-    width: calc(25% - 10.5px);
-  }
-
-  .platform__paragraph {
+  .platform__definition {
     font-size: 0.9em;
   }
 
-  .platform__date, .platform__link__label--learn {
+  .platform__launching {
     font-size: initial;
   }
 
-  .platform--current {
-    height: 408px;
-  }
-
-  .platform--coming:last-child {
-    width: calc(50% - 7px);
-  }
-
-  input.form__input {
+  input.input {
     height: 57px;
   }
 
-  input.form__input--button {
+  input.input__button {
     width: 98px;
   }
 
-  input.form__input--email {
+  input.input__email {
     width: calc(100% - 99px);
   }
+
 }
-
-/* For IE 6/7 (trigger hasLayout) */
-.cf {
-    *zoom:1;
-}
-
-
-
-
-
