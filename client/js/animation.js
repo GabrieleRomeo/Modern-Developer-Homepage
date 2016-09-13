@@ -6,7 +6,7 @@ var animation = (function(window, undefined) {
     var index = 0;
     var instances = [];
     var firstOpen = true;
-    var isBoot = false;
+    var isBoot = true;
     var view;
 
     // Enum of CSS selectors
@@ -85,7 +85,7 @@ var animation = (function(window, undefined) {
         $el.bind('click', function() {
 
             // Wait till the boot phase has been finished
-            if (!isBoot) return;
+            if (isBoot) return;
 
             view === 'mobile' ? that.openMobile() : that.open();
 
@@ -627,7 +627,6 @@ var animation = (function(window, undefined) {
         } else {
             this.resetTimeLine(this.closeTL);
             this._showDefinitionBox();
-
             this._showLaunchingDate();
             this._resetRotatePlatformName();
             this._resetFooterAlignCenter();
@@ -742,7 +741,7 @@ var animation = (function(window, undefined) {
 
         var scene = new TimelineLite({
             onComplete:function(){
-                isBoot = true;
+                isBoot = false;
             }});
 
         view = getCurrentView();
