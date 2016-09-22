@@ -195,7 +195,8 @@ var animation = (function(window, undefined) {
 
 
         platform.openTL.add(platform._showDefinitionBox(), 0.3);
-        platform.openTL.add(platform._showDescriptionMore(), 0.5);
+        // Temporarily unused
+        //platform.openTL.add(platform._showDescriptionMore(), 0.5);
         platform.openTL.add(platform._showDescription(), '+=1');
         platform.openTL.add(platform._showStatus());
 
@@ -252,7 +253,8 @@ var animation = (function(window, undefined) {
         });
 
         platform.openTL.add(platform._showDescription());
-        platform.openTL.add(platform._showDescriptionMore());
+        // Temporarily unused
+        //platform.openTL.add(platform._showDescriptionMore());
         platform.openTL.add(platform._showStatus());
 
         platform.openTL.play();
@@ -298,7 +300,8 @@ var animation = (function(window, undefined) {
 
 
         platform.closeTL.add(TweenMax.set(this._hideDefinitionBox()));
-        platform.closeTL.add(TweenMax.set(this._hideDescriptionMore()));
+        // Temporarily unused
+        //platform.closeTL.add(TweenMax.set(this._hideDescriptionMore()));
         platform.closeTL.add(TweenMax.set(this._resetDefaultCursor()));
         platform.closeTL.add(TweenMax.set(this._hideIntroduction()));
         platform.closeTL.add(TweenMax.set(this._hideDescription()));
@@ -621,7 +624,8 @@ var animation = (function(window, undefined) {
             this.resetTimeLine(this.openTL);
             this._hideStatus();
             this._hideDescription();
-            this._hideDescriptionMore();
+            // Temporarily unused
+            //this._hideDescriptionMore();
             this._showLaunchingDate();
             this.isOpen = false;
         } else {
