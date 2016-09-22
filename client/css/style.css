@@ -38,10 +38,15 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 .mantis { background-color: rgb(116, 201, 103); }
 .turquoise { background-color: rgb(93, 194, 215); }
+.turquoise:hover { background-color: rgb(20, 183, 217); }
 .pink { background-color: rgb(247, 130, 185); }
+.pink:hover { background-color: rgb(241, 96, 164); }
 .candyPink { background-color: rgb(233, 120, 119); }
+.candyPink:hover { background-color: rgb(229, 82, 80); }
 .amethyst { background-color: rgb(162, 105, 193); }
+.amethyst:hover { background-color: rgb(132, 69, 165); }
 .uBlue { background-color: rgb(106, 136, 221); }
+.uBlue:hover { background-color: rgb(80, 115, 217); }
 .font-weight-500 { font-weight: 500; }
 .input--invalid {
   border-color: #e97877 !important;
@@ -243,6 +248,11 @@ input.input__button {
 
 input.input__button:hover {
   color: rgb(255, 255, 255);
+}
+
+input.input__button:hover:enabled {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 33, 109);
 }
 
 input.input__button:active {
