@@ -49,7 +49,7 @@
                 y:-100
             }, 0.5);
 
-            //subscribeMailchimp();
+            subscribeMailchimp();
             return false;
         }, false);
     });
