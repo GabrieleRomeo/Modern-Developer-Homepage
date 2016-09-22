@@ -193,7 +193,7 @@ var animation = (function(window, undefined) {
 
         }
 
-
+        platform.openTL.add(platform._hideIntroduction(), 0.3);
         platform.openTL.add(platform._showDefinitionBox(), 0.3);
         // Temporarily unused
         //platform.openTL.add(platform._showDescriptionMore(), 0.5);
@@ -252,6 +252,7 @@ var animation = (function(window, undefined) {
             }
         });
 
+        platform.openTL.add(this._hideIntroduction());
         platform.openTL.add(platform._showDescription());
         // Temporarily unused
         //platform.openTL.add(platform._showDescriptionMore());
@@ -313,11 +314,8 @@ var animation = (function(window, undefined) {
 
     Platform.prototype._hideIntroduction = function() {
 
-        var tween = TweenMax.to(this._introduction, 1, {
-            autoAlpha: 0,
-            display: 'none',
-            scaleY: 0,
-            ease: Expo.easeInOut
+        var tween = TweenMax.set(this._introduction, {
+            display: 'none'
         });
 
         return tween;

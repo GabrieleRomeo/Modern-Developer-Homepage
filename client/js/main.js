@@ -66,12 +66,15 @@
 
     function checkValidity() {
         if (!this.validity.valid) {
+
             if (!this.classList.contains('input--invalid')) {
                 this.classList.add('input--invalid');
             }
+
             if (!submit.disabled) {
                 submit.disabled = true;
             }
+
         } else {
             this.classList.remove('input--invalid');
             submit.disabled = false;
