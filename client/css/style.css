@@ -69,29 +69,30 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 .logo {
   display: inline-block;
   width: 70px;
-  height: 45px;
+  height: calc(70px * 0.86);
   margin-bottom: 1.5em;
+  vertical-align: middle;
 }
 
 .logo__block {
   display: block;
-  margin: 0 auto 2px;
-  height: 13px;
+  margin: 0 auto 3.33%;
+  height: 21.7%;
   border-radius: 1px;
   -moz-border-radius: 1px 1px 1px 1px;
   -webkit-border-radius: 1px 1px 1px 1px;
 }
 
 .logo__block--1 {
-  width: 63px;
+  width: 90%;
 }
 
 .logo__block--3 {
-  width: 62px;
+  width: 88.6%;
 }
 
 .logo__block--4 {
-  width: 48px;
+  width: 68.6%;
 }
 
 #logo__title {
@@ -100,6 +101,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   font-size: 2.7em;
   font-weight: 200;
   line-height: 1.5em;
+  vertical-align: middle;
 }
 
 #logo__title strong {
