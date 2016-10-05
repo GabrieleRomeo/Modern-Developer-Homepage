@@ -5,7 +5,9 @@
     var doc     = win.document;
     var API     = 'https://moderndeveloper.com/api';
     var ERRORS  = {
-        'List_AlreadySubscribed': 'You have already subscribed to receive email.'
+        'List_AlreadySubscribed': 'You have already subscribed to receive email.',
+        'ValidationError': 'Enter a valid email.',
+        'List_ThrottledRecipient': 'Too many subscription requests.'
     };
 
     var sizewait, signedMsg, errorMsg, form;
