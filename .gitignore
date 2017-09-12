@@ -1,11 +1,5 @@
-# Ignore everything
-*
-
-# But not these files...
-!.gitignore
-!client/
-!README.md
-
-
-# ...even if they are in subdirectories
-!*/
+Gruntfile.js
+app.js
+client
+package.json
+routes
