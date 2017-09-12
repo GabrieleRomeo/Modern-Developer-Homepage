@@ -1,2 +1,11 @@
-dist
-node_modules
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!client/
+
+
+
+# ...even if they are in subdirectories
+!*/
