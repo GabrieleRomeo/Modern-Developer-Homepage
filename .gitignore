@@ -2,4 +2,5 @@ Gruntfile.js
 app.js
 client
 package.json
-routes.jshintrc
+routes
+.jshintrc
